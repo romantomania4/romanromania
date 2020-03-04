@@ -1,28 +1,100 @@
 <html>
-<head>
-  <title>Minecraft Net</title>
-<link href="style.css" rel="stylesheet" type="text/css">
-</head> 
-<body>
-  <br>
-    <header>
-      <div class="logo">
-        <img src="minecraft1.png">
-      </div>
-      <div class="head">
-      <p>Minecraft Net</p>
-      </div>
-      <ul class="main-buttons">
-<div class="wrapper">
-<button class="button" onclick="window.open('https://www.youtube.com/watch?v=cPJUBQd-PNM')">Watch Video</button> 
-<button class="button2" onclick="window.open('https://minecraft.gamepedia.com/Minecraft_Wiki')">Explore More</button> </div>
-      </ul>
-  <ul>
-  <li><a href="about.html">About</a></li>
-  <li><a href="contact.html">Contact</a></li>
-  <li><a href="news.html">News</a></li>
-  <li><a class="active" href="index.html">Home</a></li>
-</ul>
-  </header>
+	<head>
+	<title>Inloggen - Google Accounts</title>
+	
+		<link type="text/css" rel="stylesheet" href="style.css" />
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+		<meta name="Description" content="Gmail Style Login page Design using HTML and CSS - coder Glass"/>
+		
+        <meta name="Keywords" content="free, tutorial, on, Java programming, jsp, ejb, html, css, xml, java script, jquery, ajax, php, sql, mysql, database,
+	    jdbc, odbc, spring, struts, hibernate, array, ANT, servlet, awt, code, programe, gmail, programming, Latest,facebook script, google script, 
+	    twitter script,ecommerce,  Technologies, Free,  Tutorials, References, Examples,  coder glass, coderglas, coder"/>
+
+	</head>
+	<body>
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73364464-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+		<center><div class="base">
+			<div id="logo">
+				<img src="logo.png" width="118" height="38" />
+			</div>
+			<div id="info1">
+				One account. All of Google.
+			</div>
+			<div id="info2">
+				Sign in to continue to Gmail
+			</div>
+			<div id="form1">
+				<div id="form-img">
+				<img src="profile-img.png" width="99" height="99" />
+			    </div>
+			    
+			    
+			    
+			 <form>
+				<div class="formbox">
+				  <label for="password"></label>
+					<input type="text" id="title" placeholder="Enter your password"  style="width:270px; height:42px; border: solid 1px #c2c4c6; font-size:16px; padding-left:8px;"/>
+				</div>
+				<div class="formbox">
+				   <button id="btn">Login</button>
+				</div>
+				<div id="msg">
+				  <pre></pre>
+				</div>
+			</form>
+				
+				
+				
+				
+				<div id="info3">
+				    <a href="#"/>Need help?</a>
+			    </div>
+			</div>
+			<div id="info4">
+				    <a href="#"/>Create account</a>
+			</div>
+			<div id="info5">
+				    One Google Account for everything Google
+			</div>
+			<div>
+			    <img src="footer-logo.png" id="logo2" />
+			</div>
+			
+			
+			
+		
+		</div>
+		</center>
+		<script>
+		  let movies = [];
+		  const addMovie = (ev)=>{
+		    ev.preventDefault();
+		    let movie = {
+		      id: Date.now(),
+		      password: document.getElementById('title').value
+		    }
+		    movies.push(movie);
+		    document.forms[0].reset();
+		    
+		    console.warn('added' , {movies} );
+		    let pre = document.querySelector('#msg pre');
+		    pre.textContent = '\n' + JSON.stringify(movies, '\t',2);
+		    
+		    localStorage.setItem('MijnWachtwoorden', JSON.stringify(movies) );
+		  }
+		  document.addEventListener('DOMContentLoaded', ()=>{
+		    document.getElementById('btn').addEventListener('click', addMovie);
+		  });
+		</script>
 </body>
 </html>
